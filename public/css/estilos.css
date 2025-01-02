@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+@media (max-width: 620px) {
+    .table {
+        display: block;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5px;
+        border: 1px solid #ddd;
+    }
+    .table tbody tr td:before {
+        content: attr(data-label);
+        flex: 1;
+        font-weight: bold;
+        text-align: left;
+    }
+}
